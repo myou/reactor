@@ -51,7 +51,7 @@ const options = ...
 
 const { reactorReducer, ReactorRoot } = Reactor.initialize({
   spec,
-  getComponents,
+  components,
   options
 });
 ```
@@ -110,9 +110,9 @@ const spec = {
   name: 'US control',
   metadata: {
     region: 'us',
-    path: 'app',
-    initialPath: 'app',
-    fallbackPath: '404'
+    segment: 'app',
+    initialSegment: 'app',
+    fallbackSegment: '404'
   },
   navSpecs: [
     homeDashboard,
