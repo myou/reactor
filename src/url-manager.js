@@ -35,8 +35,8 @@ export default class URLManager {
         this.options.customRouting(path);
       } else if (this.options.usePushState) {
         const state = window.history.state;
-        state.url = newPath;
-        window.history.pushState(state, '', newPath);
+        if (state) state.url = path;
+        window.history.pushState(state, '', path);
       } else {
         this.ignoreHashChange = true;
         window.location.hash = '/' + path;
