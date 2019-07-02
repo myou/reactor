@@ -1,6 +1,6 @@
 {
   "name": "reactor-navigation",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "state-machine-driven navigation variability system",
   "main": "dist/index.js",
   "files": [
