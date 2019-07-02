@@ -36,7 +36,7 @@ export default class URLManager {
       } else if (this.options.usePushState) {
         const state = window.history.state;
         if (state) state.url = path;
-        window.history.pushState(state, '', path);
+        window.history.pushState(state, '', `/${path}`);
       } else {
         this.ignoreHashChange = true;
         window.location.hash = '/' + path;
